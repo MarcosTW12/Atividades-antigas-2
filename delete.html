@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Excluir Dados</h1>
+        <form action="delete.php" method="post" onsubmit="return confirmDelete();">
+            <label for="deletar">Digite o Codigo que deseja excluir</label>
+            <input type="text" name="deletar" id="deletar">
+            <input type="submit" value="Excluir Filme">
+        </form>
+    </div>
+
+    <div id="confirmationPopup" class="confirmation-popup">
+        <p>Deseja realmente excluir esse filme?</p>
+        <button onclick="deleteConfirmed();">Sim, excluir</button>
+        <button onclick="cancelDelete();">Cancelar</button>
+    </div>
+
+    <script>
+        function confirmDelete() {
+            var popup = document.getElementById("confirmationPopup");
+            popup.style.display = "block";
+            return false; 
+        }
+
+        function deleteConfirmed() {
+            var popup = document.getElementById("confirmationPopup");
+            popup.style.display = "none";
+            document.querySelector("form").submit();
+        }
+
+        function cancelDelete() {
+            var popup = document.getElementById("confirmationPopup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+</html>

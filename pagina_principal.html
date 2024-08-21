@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Filmes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        label, input[type="text"], input[type="number"], input[type="time"], input[type="submit"] {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        a {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <h1>Cadastrar Filmes</h1>
+       <form action="cadastro.php" method="post">
+           <label for="titulo">Digite o título do filme</label> 
+           <input type="text" name="titulo" id="titulo">
+           <label for="ano">Ano de Lançamento</label>
+           <input type="number" name="ano" id="ano">
+           <label for="duracao">Duração</label>
+           <input type="time" name="duracao" id="duracao">
+           <input type="submit" value="Cadastrar Filme">
+       </form>
+       <a href="select2.php">Ver os filmes já cadastrados</a>
+       <a href="delete.html">Excluir Filmes</a>
+       <a href="pesquisar.html">Pesquisar Filmes</a>
+       <a href="alterar.html">alterar Filmes</a>
+   </div>
+</body>
+</html>
